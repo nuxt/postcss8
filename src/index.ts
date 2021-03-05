@@ -2,9 +2,11 @@ import { resolve } from 'path'
 import { satisfies } from 'semver'
 import { name, version } from '../package.json'
 
+const pkgDir = resolve(__dirname, '..')
+
 // @ts-ignore
 global.__NUXT_PATHS__ = (global.__NUXT_PATHS__ || [])
-  .concat(resolve(__dirname, '..'))
+  .concat(pkgDir)
 
 function postcss8Module () {
   const { nuxt } = this
