@@ -27,6 +27,7 @@
     "@nuxtjs/eslint-config-typescript": "^5.0.0",
     "eslint": "^7.21.0",
     "nuxt": "^2.15.2",
-    "siroc": "^0.7.0"
+    "siroc": "^0.7.0",
+    "standard-version": "^9.1.1"
   }
 }
