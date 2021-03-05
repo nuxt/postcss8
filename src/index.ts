@@ -1,11 +1,12 @@
 import { resolve } from 'path'
 import { satisfies } from 'semver'
+import { name, version } from '../package.json'
 
 // @ts-ignore
 global.__NUXT_PATHS__ = (global.__NUXT_PATHS__ || [])
   .concat(resolve(__dirname, '..'))
 
-export default function () {
+function postcss8Module () {
   const { nuxt } = this
   const nuxtVersion = nuxt.constructor.version || '0.0.0'
   const expectedVersion = '>=2.15.0'
@@ -14,3 +15,10 @@ export default function () {
     console.warn(`[nuxt-postcss8] postcss@8 is not compatible with current version of nuxt (${nuxtVersion}). Expected: ${expectedVersion}`)
   }
 }
+
+postcss8Module.meta = {
+  name,
+  version
+}
+
+export default postcss8Module
