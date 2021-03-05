@@ -1,0 +1,32 @@
+# postcss8 support for nuxt 2.15+
+
+Since [nuxt@2.15](https://github.com/nuxt/nuxt.js/releases/tag/v2.15.0) nuxt supports opting-in to use postcss@8 (via [nuxt/nuxt.js#8546](https://github.com/nuxt/nuxt.js/pull/8546)).
+
+To avoid brekaing changes, default upgrade is pending for [csstools/postcss-preset-env#191](https://github.com/csstools/postcss-preset-env/issues/191) (see [nuxt/nuxt.js#8087](https://github.com/nuxt/nuxt.js/issues/8087))
+
+In the meantime, this module allows easier opting-in process:
+
+- Ensures supported nuxt version is used (`>= 2.15.0`)
+- Forces to use upgraded dependencies using `__NUXT_PATHS__`
+- Will be updated accordingly to self-disable when a nuxt version with default postcss8 detected
+
+## Usage
+
+Install `nuxt-postcss8` as as `devDependency`:
+
+```sh
+yarn add --dev nuxt-postcss8
+# or
+npm i -D nuxt-postcss8
+```
+
+Add `nuxt-postcss8` to `buildModules` in `nuxt.config`:
+
+```js
+// nuxt.config
+export default {
+  buildModules: [
+    'nuxt-postcss8'
+  ]
+}
+```

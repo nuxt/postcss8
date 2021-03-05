@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": false,
+    "types": [
+      "node",
+      "jest"
+    ]
+  }
+}

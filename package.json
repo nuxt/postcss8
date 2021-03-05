@@ -1,0 +1,32 @@
+{
+  "name": "nuxt-postcss8",
+  "version": "1.0.0",
+  "repository": "pi0/nuxt-postcss8",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "siroc build",
+    "prepublishOnly": "yarn build",
+    "dev": "nuxt dev test/fixture",
+    "lint": "eslint --ext .ts .",
+    "release": "yarn test && standard-version && git push --follow-tags && npm publish",
+    "test": "yarn lint"
+  },
+  "dependencies": {
+    "css-loader": "^5.0.0",
+    "postcss": "^8.1.10",
+    "postcss-import": "^13.0.0",
+    "postcss-loader": "^4.1.0",
+    "postcss-url": "^10.1.1",
+    "semver": "^7.3.4"
+  },
+  "devDependencies": {
+    "@nuxtjs/eslint-config-typescript": "^5.0.0",
+    "eslint": "^7.21.0",
+    "nuxt": "^2.15.2",
+    "siroc": "^0.7.0"
+  }
+}
