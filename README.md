@@ -12,7 +12,7 @@ In the meantime, this module allows easier opting-in process:
 
 ## Usage
 
-Install `nuxt-postcss8` as as `devDependency`:
+Install `nuxt-postcss8` as `devDependency`:
 
 ```sh
 yarn add --dev nuxt-postcss8
@@ -33,7 +33,7 @@ export default {
 
 ### For module authors
 
-If you have a nuxt module that requires postcss@8, install `postcss@8` and `nuxt-postcss8` as as `dependency`:
+If you have a nuxt module that requires postcss@8, install `postcss@8` and `nuxt-postcss8` as `dependency`:
 
 ```sh
 yarn add postcss@8 nuxt-postcss8
