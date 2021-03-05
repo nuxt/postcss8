@@ -2,7 +2,7 @@
 
 Since [nuxt@2.15](https://github.com/nuxt/nuxt.js/releases/tag/v2.15.0) nuxt supports opting-in to use postcss@8 (via [nuxt/nuxt.js#8546](https://github.com/nuxt/nuxt.js/pull/8546)).
 
-To avoid brekaing changes, default upgrade is pending for [csstools/postcss-preset-env#191](https://github.com/csstools/postcss-preset-env/issues/191) (see [nuxt/nuxt.js#8087](https://github.com/nuxt/nuxt.js/issues/8087))
+To avoid brekaing changes, default upgrade is pending for [csstools/postcss-preset-env#191](https://github.com/csstools/postcss-preset-env/issues/191) (see [nuxt/nuxt.js#8087](https://github.com/nuxt/nuxt.js/issues/8087) and [nuxt/nuxt.js#8408](https://github.com/nuxt/nuxt.js/pull/8408))
 
 In the meantime, this module allows easier opting-in process:
 
@@ -11,6 +11,8 @@ In the meantime, this module allows easier opting-in process:
 - Will be updated accordingly to self-disable when a nuxt version with default postcss8 detected
 
 ## Usage
+
+## Per project
 
 Install `nuxt-postcss8` as as `devDependency`:
 
@@ -30,3 +32,21 @@ export default {
   ]
 }
 ```
+
+### For module authors
+
+If you have a nuxt module that requires postcss@8, install `postcss@8` and `nuxt-postcss8` as as `dependency`:
+
+```sh
+yarn add postcss@8 nuxt-postcss8
+# or
+npm i postcss@8 nuxt-postcss8
+```
+
+Inside module:
+```js
+export default async function() {
+  await this.addModule('nuxt-postcss8')
+}
+```
+
