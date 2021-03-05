@@ -12,8 +12,6 @@ In the meantime, this module allows easier opting-in process:
 
 ## Usage
 
-## Per project
-
 Install `nuxt-postcss8` as as `devDependency`:
 
 ```sh
@@ -46,7 +44,7 @@ npm i postcss@8 nuxt-postcss8
 Inside module:
 ```js
 export default async function() {
-  await this.addModule('nuxt-postcss8')
+  await this.addModule(require('nuxt-postcss8'))
 }
 ```
 
