@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.1](https://github.com/pi0/nuxt-postcss8/compare/v1.1.0...v1.1.1) (2021-03-10)
+
+
+### Bug Fixes
+
+* improve ordering ([aab942c](https://github.com/pi0/nuxt-postcss8/commit/aab942ccbcd6aae5d5829355b1bde3923b67c488))
+
 ## [1.1.0](https://github.com/pi0/nuxt-postcss8/compare/v1.0.4...v1.1.0) (2021-03-10)
 
 
