@@ -16,7 +16,10 @@
     "test": "yarn lint"
   },
   "dependencies": {
+    "autoprefixer": "^10.2.5",
+    "create-require": "^1.1.1",
     "css-loader": "^5.0.0",
+    "defu": "^3.2.2",
     "postcss": "^8.1.10",
     "postcss-import": "^13.0.0",
     "postcss-loader": "^4.1.0",

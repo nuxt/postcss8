@@ -1,5 +1,7 @@
 import { resolve } from 'path'
 import { satisfies } from 'semver'
+import createRequire from 'create-require'
+import defu from 'defu'
 import { name, version } from '../package.json'
 
 function postcss8Module () {
@@ -9,10 +11,25 @@ function postcss8Module () {
   if (!satisfies(nuxtVersion, expectedVersion)) {
     // eslint-disable-next-line no-console
     console.warn(`[nuxt-postcss8] postcss@8 is not compatible with current version of nuxt (${nuxtVersion}). Expected: ${expectedVersion}`)
+    return
   }
 
-  const pkgDir = resolve(__dirname, '..')
+  const r = createRequire(__dirname).resolve
+  const moveToLast = (arr, item) => {
+    if (!arr.includes(item)) { return arr }
+    return arr.filter(el => el !== item).concat(item)
+  }
+  nuxt.options.build.postcss = defu(nuxt.options.build.postcss, {
+    plugins: {
+      [r('autoprefixer')]: {}
+    },
+    order (names) {
+      names = moveToLast(names, 'tailwindcss')
+      return names
+    }
+  })
 
+  const pkgDir = resolve(__dirname, '..')
   // @ts-ignore
   global.__NUXT_PATHS__ = (global.__NUXT_PATHS__ || []).concat(pkgDir)
   // @ts-ignore
