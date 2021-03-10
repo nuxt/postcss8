@@ -6,8 +6,8 @@ To avoid breaking changes, default upgrade is pending for [csstools/postcss-pres
 
 In the meantime, this module allows easier opting-in process:
 
-- Ensures supported nuxt version is used (`>= 2.15.0`)
-- Forces to use upgraded dependencies using `__NUXT_PATHS__`
+- Ensures supported nuxt version is used (`>= 2.15.3`)
+- Forces to use upgraded dependencies using `__NUXT_PREPATHS__`
 - Will be updated accordingly to self-disable when a nuxt version with default postcss8 detected
 
 ## Usage
