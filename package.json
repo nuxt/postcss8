@@ -1,7 +1,7 @@
 {
-  "name": "nuxt-postcss8",
+  "name": "@nuxt/postcss8",
   "version": "1.1.2",
-  "repository": "pi0/nuxt-postcss8",
+  "repository": "nuxt/postcss8",
   "license": "MIT",
   "main": "./dist/index.js",
   "files": [

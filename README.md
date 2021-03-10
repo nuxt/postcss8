@@ -13,39 +13,39 @@ In the meantime, this module allows rapid migration:
 
 ## Usage
 
-Install `nuxt-postcss8` as `devDependency`:
+Install `@nuxt/postcss8` as `devDependency`:
 
 ```sh
-yarn add --dev nuxt-postcss8
+yarn add --dev @nuxt/postcss8
 # or
-npm i -D nuxt-postcss8
+npm i -D @nuxt/postcss8
 ```
 
-Add `nuxt-postcss8` to `buildModules` in `nuxt.config`:
+Add `@nuxt/postcss8` to `buildModules` in `nuxt.config`:
 
 ```js
 // nuxt.config
 export default {
   buildModules: [
-    'nuxt-postcss8'
+    '@nuxt/postcss8'
   ]
 }
 ```
 
 ### For module authors
 
-If you have a nuxt module that requires postcss@8, install `postcss@8` and `nuxt-postcss8` as `dependency`:
+If you have a nuxt module that requires postcss@8, install `postcss@8` and `@nuxt/postcss8` as `dependency`:
 
 ```sh
-yarn add postcss@8 nuxt-postcss8
+yarn add postcss@8 @nuxt/postcss8
 # or
-npm i postcss@8 nuxt-postcss8
+npm i postcss@8 @nuxt/postcss8
 ```
 
 Inside module:
 ```js
 export default async function() {
-  await this.addModule(require('nuxt-postcss8'))
+  await this.addModule(require('@nuxt/postcss8'))
 }
 ```
 
