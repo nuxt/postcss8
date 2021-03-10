@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/pi0/nuxt-postcss8/compare/v1.0.4...v1.1.0) (2021-03-10)
+
+
+### Features
+
+* autoprefixer and order correction for tailwind ([cdf0ed9](https://github.com/pi0/nuxt-postcss8/commit/cdf0ed934b02281b96140acdc3d2e1d2ff5edb99))
+
 ### [1.0.4](https://github.com/pi0/nuxt-postcss8/compare/v1.0.3...v1.0.4) (2021-03-10)
 
 ### [1.0.3](https://github.com/pi0/nuxt-postcss8/compare/v1.0.2...v1.0.3) (2021-03-05)
