@@ -1,6 +1,5 @@
 import { resolve } from 'path'
 import { satisfies } from 'semver'
-import createRequire from 'create-require'
 import defu from 'defu'
 import { name, version } from '../package.json'
 
@@ -14,7 +13,6 @@ function postcss8Module () {
     return
   }
 
-  const r = createRequire(__dirname).resolve
   const moveToLast = (arr, item) => {
     if (!arr.includes(item)) { return arr }
     return arr.filter(el => el !== item).concat(item)
@@ -25,7 +23,7 @@ function postcss8Module () {
   }
   nuxt.options.build.postcss = defu(nuxt.options.build.postcss, {
     plugins: {
-      [r('autoprefixer')]: {}
+      autoprefixer: {}
     },
     order (names) {
       names = moveToFirst(names, 'postcss-url')
