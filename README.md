@@ -1,5 +1,9 @@
 # postcss@8 support for nuxt@2
 
+[![npm version][npm-version-src]][npm-version-href]
+[![npm downloads][npm-downloads-src]][npm-downloads-href]
+[![license][license-src]][license-href]
+
 This module allows opting-in to [postcss@8](https://github.com/postcss/postcss/releases/tag/8.0.0) with nuxt 2 projects.
 
 - Ensures supported nuxt version is used (`>= 2.15.3`)
@@ -45,3 +49,14 @@ export default async function() {
 }
 ```
 
+## 📑 License
+
+[MIT License](./LICENSE)
+
+<!-- Badges -->
+[npm-version-src]: https://flat.badgen.net/npm/v/@nuxt/postcss8
+[npm-version-href]: https://npmjs.com/package/@nuxt/postcss8
+[npm-downloads-src]: https://flat.badgen.net/npm/dm/@nuxt/postcss8
+[npm-downloads-href]: https://npmjs.com/package/@nuxt/postcss8
+[license-src]: https://flat.badgen.net/github/license/nuxt/postcss8
+[license-href]: https://npmjs.com/package/@nuxt/postcss8
