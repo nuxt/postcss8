@@ -9,9 +9,9 @@ export default {
   ],
   build: {
     postcss: {
-      plugins: [
-        require('./mock-plugin')
-      ]
+      plugins: {
+        'mock-plugin': require('./mock-plugin')
+      }
     }
   }
 }

@@ -20,9 +20,13 @@ function postcss8Module () {
     return [item].concat(arr.filter(el => el !== item))
   }
   nuxt.options.build.postcss = defu(nuxt.options.build.postcss, {
-    plugins: {
-      autoprefixer: {}
-    },
+    plugins: Array.isArray(nuxt.options.build.postcss.plugins)
+      ? [
+          ['autoprefixer', {}]
+        ]
+      : {
+          autoprefixer: {}
+        },
     order (names) {
       names = moveToFirst(names, 'postcss-url')
       names = moveToFirst(names, 'postcss-import')
