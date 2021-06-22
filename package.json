@@ -11,6 +11,7 @@
     "build": "siroc build",
     "prepublishOnly": "yarn build",
     "dev": "nuxt dev test/fixture",
+    "dev:legacy": "nuxt dev -c nuxt.config.legacy.ts test/fixture",
     "lint": "eslint --ext .ts .",
     "release": "yarn test && standard-version && git push --follow-tags && npm publish",
     "test": "yarn build && jest"
