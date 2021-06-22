@@ -25,6 +25,18 @@ describe('@nuxt/postcss8', () => {
         pluginB: {},
         autoprefixer: {}
       }
+    ],
+    [
+      'plugins are specified by array',
+      [
+        ['pluginA', {}],
+        ['pluginB', {}]
+      ],
+      [
+        ['autoprefixer', {}],
+        ['pluginA', {}],
+        ['pluginB', {}]
+      ]
     ]
   ])('when %s', (_case: string, pluginsInDefaults: object, pluginsExpected: object) => {
     describe(`defaults are ${JSON.stringify(pluginsInDefaults)}`, () => {
