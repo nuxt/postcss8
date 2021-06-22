@@ -13,7 +13,7 @@
     "dev": "nuxt dev test/fixture",
     "lint": "eslint --ext .ts .",
     "release": "yarn test && standard-version && git push --follow-tags && npm publish",
-    "test": "yarn lint"
+    "test": "yarn build && jest"
   },
   "dependencies": {
     "autoprefixer": "^10.2.5",
@@ -27,9 +27,13 @@
   },
   "devDependencies": {
     "@nuxtjs/eslint-config-typescript": "^5.0.0",
+    "@types/jest": "26.0.23",
     "eslint": "^7.22.0",
+    "jest": "27.0.5",
     "nuxt": "^2.15.3",
     "siroc": "^0.8.0",
-    "standard-version": "^9.1.1"
+    "standard-version": "^9.1.1",
+    "ts-jest": "27.0.3",
+    "ts-node": "10.0.0"
   }
 }
