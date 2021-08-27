@@ -27,6 +27,8 @@ function postcss8Module () {
       names = moveToFirst(names, 'postcss-url')
       names = moveToFirst(names, 'postcss-import')
       names = moveToLast(names, 'autoprefixer')
+      names = moveToLast(names, 'postcss-preset-env')
+      names = moveToLast(names, 'cssnano')
       return names
     }
   })
