@@ -23,7 +23,7 @@
     "postcss-import": "^14.1.0",
     "postcss-loader": "^4.2.0",
     "postcss-url": "^10.1.3",
-    "semver": "^7.3.6"
+    "semver": "^7.3.7"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config-typescript": "^9.0.0",
