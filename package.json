@@ -30,6 +30,6 @@
     "eslint": "^8.13.0",
     "nuxt": "^2.15.8",
     "siroc": "^0.16.0",
-    "standard-version": "^9.3.2"
+    "commit-and-tag-version": "^9.5.0"
   }
 }
