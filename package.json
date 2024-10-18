@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "@nuxtjs/eslint-config-typescript": "^9.0.0",
-    "eslint": "^8.13.0",
+    "eslint": "^9.13.0",
     "nuxt": "^2.15.8",
     "siroc": "^0.16.0",
     "standard-version": "^9.3.2"
